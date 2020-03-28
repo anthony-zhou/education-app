@@ -1,0 +1,88 @@
+body {
+  overflow: hidden;
+}
+
+.problem {
+  position: absolute;
+  top: 0;
+  background-color: rgba(24,24,24,1);
+  height: 100%;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.student {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Tooltip container */
+.tooltip {
+  color: white;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  opacity: 0;
+  width: 200px;
+  background-color: rgb(75,75,75);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: -5px;
+  left: 105%;
+  z-index: 1;
+
+  transition: opacity 0.5s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgb(75,75,75) transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+
+/* Styles specific to TeacherView */
+.teacher-view .problem {
+  width: 70%;
+}
+
+.students {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgba(60, 60, 60, 1);
+  width: 30%;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Styles specific to StudentView */
+
+.student-view .problem {
+  width: 50%;
+}
+
+#code-editor {
+  right: 0;
+}
