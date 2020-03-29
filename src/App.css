@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  color: white;
 }
 
 .problem {
@@ -95,5 +96,24 @@ body {
   position: absolute;
   right: 10vh;
   bottom: 10vh;
-  background-color: blue;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 5px black;
+  font-size: 20px;
+  transition: 0.5s box-shadow;
+}
+
+#run-button:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px black;
+}
+
+
+
+/* Styles specific to Intro Screen */
+.intro-screen {
+  background-color: rgb(24,24,24);
+  height: 100%;
+  width: 100%;
 }
