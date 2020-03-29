@@ -4,30 +4,43 @@ import StudentView from './StudentView/StudentView.js';
 import IntroScreen from './StudentView/IntroScreen.js';
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="container">
-      <Router>
-        <Switch>
-          <Route path={process.env.PUBLIC_URL + "/instructor"}>
-            <TeacherView></TeacherView>
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/student"}>
-            <StudentView></StudentView>
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/"}>
-            <IntroScreen></IntroScreen>
-          </Route>
-        </Switch>
-      </Router>
-      
-    </div>
-  );
+class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {studentName: ""};
+    this.changeStudentName = this.changeStudentName.bind(this);
+  }
+
+  changeStudentName(name) {
+    this.setState({studentName: name});
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <Router basename="/">
+          <Switch>
+            <Route path="/instructor">
+              <TeacherView></TeacherView>
+            </Route>
+            <Route path="/student">
+              <StudentView studentName={this.state.studentName}></StudentView>
+            </Route>
+            <Route path="/">
+              <IntroScreen changeStudentName={this.changeStudentName}></IntroScreen>
+            </Route>
+          </Switch>
+        </Router>
+        
+      </div>
+    );
+  } 
 }
 
 export default App;

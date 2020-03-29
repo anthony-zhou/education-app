@@ -8,8 +8,8 @@ import "./student.css";
 import Popup from './Popup.js';
 
 class StudentView extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {content: starterCode, showPopup: false, correct: false};
     this.togglePopup = this.togglePopup.bind(this);
     this.handleChange = this.handleChange.bind(this);
