@@ -1,6 +1,7 @@
 import React from 'react';
 
 function RunButton(props) {
+
     function handleClick(e) {
         e.preventDefault();
         const script = props.content;
@@ -11,11 +12,15 @@ function RunButton(props) {
     function test(main) {
         let input = [1, 5, 4, 3, 2];
         let output = 5;
+        console.log(main(input));
         if(main(input) === output) {
             console.log("It works");
+            props.setCorrect(true);
         } else {
+            props.setCorrect(false);
             console.log("It doesn't work.")
         }
+        props.togglePopup();
     }
 
     return (
