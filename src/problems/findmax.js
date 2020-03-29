@@ -19,7 +19,7 @@ function FindMax () {
     <SyntaxHighlighter language="javascript" style={monokai}>[5, -4, 3, 1, 7]</SyntaxHighlighter><br/><br/>
 
     <i>Output</i><br></br>
-    <SyntaxHighlighter language="javascript" style={monokai}>5</SyntaxHighlighter>
+    <SyntaxHighlighter language="javascript" style={monokai}>7</SyntaxHighlighter>
 
     <h2>Instructions:</h2>
     <p>Modify the main function to return the correct output.</p>

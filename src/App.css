@@ -134,27 +134,6 @@ main
   left:50%;
   transform:translate(-50%, -50%);
 }
-/* 
-input[type=text]
-{
-  border:0;
-  font-size:14pt;
-  font-weight:900;
-  width:5rem;
-  height:5rem;
-  cursor:pointer;
-  border-radius:50%;
-  border:6px solid transparent;
-  transition:all 0.1s ease-out;
-  background-color:hsl(190deg, 60%, 30%);
-  color:transparent;
-  font-family:"PT Sans", sans-serif;
-}
-
-input[type=text]::placeholder
-{
-  color:transparent;
-} */
 
 input[type=text]
 {
@@ -175,12 +154,12 @@ input[type=text]::placeholder
   color:#ccc;
 }
 
-input[type=text]+button
+input[type=text]+#signup-btn
 {
   opacity:1;
 }
 
-button
+#signup-btn
 {
   opacity:0;
   transition:0.2s;
@@ -198,7 +177,7 @@ button
   letter-spacing:1px;
 }
 
-button:hover
+#signup-btn:hover
 {
   background-color:black;
   transform:scale(1.1);

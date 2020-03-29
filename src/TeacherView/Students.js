@@ -3,7 +3,7 @@ import { Component } from 'react';
 import Student from './Student.js';
 
 
-const api = "http://arcane-spire-25876.herokuapp.com/api/users";
+const api = "https://arcane-spire-25876.herokuapp.com/api/users";
 
 class Students extends Component {
   constructor(props) {

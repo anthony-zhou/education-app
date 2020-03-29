@@ -47,17 +47,30 @@ class StudentView extends React.Component {
           fontSize={14}
           name="code-editor"
           editorProps={{ $blockScrolling:true }}/>
-        <RunButton content={this.state.content} togglePopup={this.togglePopup} setCorrect={this.setCorrect} />
+        <RunButton name={this.props.studentName} content={this.state.content} togglePopup={this.togglePopup} setCorrect={this.setCorrect} />
         
         {this.state.showPopup ?
         <Popup
-            text={this.state.correct? "Congrats! All test cases passed." : "Not all test cases passed. Please try again."}
+            text={this.state.correct? <Correct name={this.props.studentName}></Correct> : "Not all test cases passed. Please try again."}
             togglePopup={this.togglePopup}
           />
         : null }
       </div>
     );
   }
+}
+
+function Correct(props) {
+  return (
+    <div>
+      Congrats! All test cases passed!
+    <form method="POST" action="https://arcane-spire-25876.herokuapp.com/api/users">
+      <input type="hidden" name="userFinished" value="Anthony Zhou" />
+      <input type="hidden" name="url" value="https://anthony-zhou.github.io/education-app/#/student"/>
+      <button>Submit to teacher</button>
+    </form>
+    </div>
+  )
 }
 
 const starterCode = `function (nums) {

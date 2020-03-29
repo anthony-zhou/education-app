@@ -11,11 +11,13 @@ function RunButton(props) {
 
     function test(main) {
         let input = [1, 5, 4, 3, 2];
-        let output = 5;
+        let output = 5; //CHANGE THIS LATER
         console.log(main(input));
         if(main(input) === output) {
             console.log("It works");
             props.setCorrect(true);
+            
+            //.then(result=>result.json()).then(res=>console.log(res));
         } else {
             props.setCorrect(false);
             console.log("It doesn't work.")

@@ -22,11 +22,11 @@ class IntroScreen extends React.Component {
     return (
       <div className = "intro-screen">
       <div id = "wrapper">
-      <h1 style={{color: "white"}}>Welcome to the Education App!</h1>
-      <form method="POST" action="http://arcane-spire-25876.herokuapp.com/api/users">
-        <input type="hidden" name="url" value="localhost:3000/education-app#/student"/>
+      <h1 style={{color: "white"}}>Welcome to Code Together!</h1>
+      <form method="POST" action="https://arcane-spire-25876.herokuapp.com/api/users">
+        <input type="hidden" name="url" value="https://anthony-zhou.github.io/education-app/#/student"/>
         <input type="text" name="name" placeholder="Your name" onChange={this.handleChange} value={this.state.name} required/>
-        <SubmitButton></SubmitButton>
+        <SubmitButton name={this.state.name}></SubmitButton>
       </form>
   </div>
       </div>
@@ -34,17 +34,18 @@ class IntroScreen extends React.Component {
   }
 }
 
-function SubmitButton() {
+function SubmitButton(props) {
 
   let history = useHistory();
 
-  function onClick(e) {
-    e.preventDefault();
-    history.push("/student");
-  }
+  // function onClick(e) {
+  //   // e.preventDefault();
+  //   history.push("/student")
+
+  // }
 
   return (
-    <button onClick={onClick}>start coding!</button>
+    <button id="signup-btn" /*onClick={onClick}*/>start coding!</button>
   );
 }
 
