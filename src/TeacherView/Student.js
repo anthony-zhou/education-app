@@ -4,6 +4,7 @@ function Student(props) {
   return (
     <div className="student">
         {props.name}
+        <br />
         {props.status}
     </div>
   );
