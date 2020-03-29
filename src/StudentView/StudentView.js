@@ -39,7 +39,7 @@ class StudentView extends React.Component {
 }
 
 const starterCode = `function (nums) {
-  // Begin coding here
+  //enter code
   return 0;
 }
 `

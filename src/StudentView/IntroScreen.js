@@ -1,25 +1,17 @@
 import React from 'react';
 
 class IntroScreen extends React.Component {
-  constructor() {
-    super();
-    this.state = {name: "Your name here"};
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(newValue) {
-    this.setState({name:newValue});
-  }
-
   render() {
     return (
-      <div className="intro-screen">
-        <input type="text" value={this.state.name} onChange={this.handleChange}></input>
+      <div className = "intro-screen">
+      <div id = "wrapper">
+      <h1 style={{color: "white"}}>Welcome to the Education App!</h1>
+      <input type="text" placeholder="Type stuff"/>
+  <button>start coding!</button>
+  </div>
       </div>
     );
   }
 }
-
 
 export default IntroScreen;
