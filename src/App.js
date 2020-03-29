@@ -14,13 +14,13 @@ function App() {
     <div className="container">
       <Router>
         <Switch>
-          <Route path="/instructor">
+          <Route path={process.env.PUBLIC_URL + "/instructor"}>
             <TeacherView></TeacherView>
           </Route>
-          <Route path="/student">
+          <Route path={process.env.PUBLIC_URL + "/student"}>
             <StudentView></StudentView>
           </Route>
-          <Route path="/">
+          <Route path={process.env.PUBLIC_URL + "/"}>
             <IntroScreen></IntroScreen>
           </Route>
         </Switch>
